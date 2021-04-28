@@ -17,6 +17,10 @@ const CryptocurrencySchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
+    variation: {
+        type: Number,
+        required: true
+    },
     imgUrl: {
         type: String,
         required: true
