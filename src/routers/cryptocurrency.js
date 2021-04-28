@@ -9,6 +9,7 @@ router.post('/cryptocurrencies', async (req, res) => {
             name: req.body.name,
             value: req.body.value,
             isFavourite: req.body.isFavourite,
+            imgUrl: req.body.imgUrl
         })
 
         await cryptocurrency.save();
@@ -53,6 +54,7 @@ router.patch('/cryptocurrencies/:id', async (req, res) => {
             name: (req.body.name === undefined ? cryptocurrency.name : req.body.name),
             value: (req.body.value === undefined ? cryptocurrency.value : req.body.value),
             isFavourite: (req.body.isFavourite === undefined ? cryptocurrency.isFavourite : req.body.isFavourite),
+            imgUrl: (req.body.imgUrl === undefined ? cryptocurrency.imgUrl : req.body.imgUrl),
         }
 
         await Cryptocurrency.updateOne(

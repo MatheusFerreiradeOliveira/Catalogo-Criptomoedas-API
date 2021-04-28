@@ -12,6 +12,10 @@ const CryptocurrencySchema = new mongoose.Schema({
     isFavourite: {
         type: Boolean,
         default: false
+    },
+    imgUrl: {
+        type: String,
+        required: true
     }
 }, {
     timestamps: true
