@@ -5,6 +5,10 @@ const CryptocurrencySchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    code: {
+        type: String,
+        required: true,
+    },
     value: {
         type: Number,
         required: true
