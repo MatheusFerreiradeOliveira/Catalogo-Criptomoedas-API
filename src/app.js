@@ -8,6 +8,9 @@ const cryptoRouter = require('./routers/cryptocurrency');
 
 const app = express();
 
+dotenv.config();
+
+app.use(express.json());
 app.use(cors({
     origin: '*'
 }));
